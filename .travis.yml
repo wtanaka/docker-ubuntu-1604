@@ -1,4 +1,6 @@
 services:
 - docker
 script:
-- docker build .
+- docker build -t wtanaka/ubuntu-1604 .
+# Make sure it is still possible to use apt
+- docker run wtanaka/ubuntu-1604 apt-get update
