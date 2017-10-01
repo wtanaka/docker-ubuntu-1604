@@ -3,6 +3,8 @@ services:
 script:
 - docker build -t wtanaka/ubuntu-1604 .
 # Make sure it is still possible to use apt
-- docker run wtanaka/ubuntu-1604 sh -c "apt-get update && apt-get install less"
+- docker run wtanaka/ubuntu-1604 sh -c "apt-get update && apt-get -y install less"
+# Make sure it is still possible to use apt
+- docker run wtanaka/ubuntu-1604 sh -c "apt-get update && apt-get -y install texlive-latex-base"
 after_success:
 - curl https://registry.hub.docker.com/u/wtanaka/ubuntu-1604/trigger/653e0d03-132d-4368-be5e-82bf67d54a32/
