@@ -7,4 +7,8 @@ script:
 # Make sure it is still possible to use apt
 - docker run wtanaka/ubuntu-1604 sh -c "apt-get update && apt-get -y install texlive-latex-base"
 after_success:
-- curl https://registry.hub.docker.com/u/wtanaka/ubuntu-1604/trigger/653e0d03-132d-4368-be5e-82bf67d54a32/
+- >
+  curl -H "Content-Type: application/json"
+  --data '{"source_type": "Branch", "source_name": "master"}'
+  -X POST
+  https://registry.hub.docker.com/u/wtanaka/ubuntu-1604/trigger/653e0d03-132d-4368-be5e-82bf67d54a32/
