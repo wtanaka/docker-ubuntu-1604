@@ -12,3 +12,7 @@ after_success:
   --data '{"source_type": "Branch", "source_name": "master"}'
   -X POST
   https://registry.hub.docker.com/u/wtanaka/ubuntu-1604/trigger/653e0d03-132d-4368-be5e-82bf67d54a32/
+notifications:
+  email:
+    recipients:
+      secure: RWrsfV+Kq50PkiGvSxLLXT6D0tOVvyyScW6juUADC+FDh2gL2gtluwHZbZ6zjK7HtgSWl7wXGeMCLzE9ghbUnTh/MQ4tWlkJWMHVtcK7liyuRUyM/GX3rGPWkzDooN1dNacRsT4RsotlkfTpBIUiXe8SWe4rX9X89NlHk/HWVlAtj8fxsnAaV5wfm6JHzkCb8xWc3MMi9jBJx3HldaGHTxN7T30o/xeE5aa2GUERSG6967OkCdb+BJl4/RJL8Pl52wkJXado8YDutykzyepzoFBNyIf/FC06SrtCjbKxuzyZ5SX/Nc9+5nFr0fP1mVMoACZSJF3TxNwKwY9W4t6Lqx95sZi9/aArshwLCg0A82bwm2cSuzdtQ3nFk9vykhCoeDpOZpMAR/kCWmY4LjNDOM/vnMcYHuKIYPrKpblOIlJhMm5zp5R0fGruhLOz/JSLWoeHaJWdKUWrUDTleRfQFu41Fhht8dPnDya+rlgahMonE1FXeKwm+7WnK1dPPAyh0+Ieng3we4D4nm0qNYGVeObVpwn5vrALTgXTdrY6Ag6Nc+B+vLaXb7yUDy7kSYqEbKCFo61Qh0/kQOzUYnxxWul7lg2WbSke0KQYtOwGmLcUUMLTRR4zbAepL+MRispEe5lhwkI3KIZyPkaG7foqWNCnGCaM+W028AtSbyC0Sao=
