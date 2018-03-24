@@ -2,6 +2,14 @@ services:
 - docker
 script:
 - docker build -t wtanaka/ubuntu-1604 .
+# Create a file
+- >
+  docker run
+  -e "HOSTUID=`id -u`"
+  -v "`pwd`:/work"
+  wtanaka/ubuntu-1604
+  touch ActapWuSwyk2
+  2>&1 && [ -f ActapWuSwyk2 ]
 # Make sure it is still possible to use apt
 - docker run wtanaka/ubuntu-1604 sh -c "apt-get update && apt-get -y install less"
 # Make sure it is still possible to use apt
