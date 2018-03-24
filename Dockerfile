@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 MAINTAINER http://wtanaka.com/dockerfiles
-RUN apt-get update \
+COPY run-as-hostuid.sh /
+RUN chmod +x /run-as-hostuid.sh \
+  && apt-get update \
   && apt-get -y upgrade \
   && apt-get clean autoclean -y \
   && apt-get autoremove -y \
